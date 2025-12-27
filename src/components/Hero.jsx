@@ -1,7 +1,10 @@
 import React from 'react'
-import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa'
+import { FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa'
 import './Hero.css'
 
+/**
+ * Hero section - The main landing area with introduction and call-to-action buttons
+ */
 const Hero = () => {
   return (
     <section id="home" className="hero">

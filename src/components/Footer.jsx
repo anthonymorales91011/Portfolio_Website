@@ -1,7 +1,10 @@
 import React from 'react'
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
+import { FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import './Footer.css'
 
+/**
+ * Footer component - Displays social links and copyright information
+ */
 const Footer = () => {
   const currentYear = new Date().getFullYear()
 

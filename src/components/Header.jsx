@@ -2,10 +2,15 @@ import React, { useState, useEffect } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import './Header.css'
 
+/**
+ * Header component - Navigation bar with smooth scrolling and mobile menu
+ * Changes appearance when user scrolls down and handles mobile menu toggle
+ */
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
+  // Add shadow effect to header when user scrolls down
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
@@ -14,6 +19,7 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Smooth scroll to section and close mobile menu
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
     if (element) {

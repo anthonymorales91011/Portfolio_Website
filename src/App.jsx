@@ -9,6 +9,10 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import './App.css'
 
+/**
+ * Main App component - Portfolio website layout
+ * Renders all sections in order: Header, Hero, About, Skills, Projects, Awards, Contact, Footer
+ */
 function App() {
   return (
     <div className="App">

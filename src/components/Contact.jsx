@@ -2,6 +2,11 @@ import React, { useState } from 'react'
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa'
 import './Contact.css'
 
+/**
+ * Contact section - Contact information and message form
+ * Note: Form submission currently shows an alert. To enable email functionality,
+ * integrate with a service like Formspree, EmailJS, or a backend API.
+ */
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -18,7 +23,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Handle form submission here
+    // TODO: Integrate with email service or backend API for actual form submission
     console.log('Form submitted:', formData)
     alert('Thank you for your message! I will get back to you soon.')
     setFormData({ name: '', email: '', message: '' })

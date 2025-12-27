@@ -3,6 +3,10 @@ import { FaPython, FaFlask, FaCode, FaLaptop, FaChartLine } from 'react-icons/fa
 import ScrollAnimation from './ScrollAnimation'
 import './Skills.css'
 
+/**
+ * Skills section - Displays technical skills organized by category
+ * Skills are grouped into Programming, Laboratory Techniques, and Additional Skills
+ */
 const Skills = () => {
   const skillCategories = [
     {

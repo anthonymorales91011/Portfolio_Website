@@ -2,7 +2,13 @@ import React, { useEffect } from 'react'
 import { FaTimes } from 'react-icons/fa'
 import './PosterModal.css'
 
+/**
+ * PosterModal component - Full-screen modal for viewing research posters
+ * Supports both PDF and image formats, with keyboard navigation (ESC to close)
+ * Prevents body scrolling when modal is open
+ */
 const PosterModal = ({ poster, isOpen, onClose }) => {
+  // Prevent body scrolling when modal is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
@@ -14,6 +20,7 @@ const PosterModal = ({ poster, isOpen, onClose }) => {
     }
   }, [isOpen])
 
+  // Close modal when ESC key is pressed
   useEffect(() => {
     const handleEscape = (e) => {
       if (e.key === 'Escape') {
@@ -55,5 +62,3 @@ const PosterModal = ({ poster, isOpen, onClose }) => {
 }
 
 export default PosterModal
-
-

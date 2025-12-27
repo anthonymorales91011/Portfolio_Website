@@ -2,6 +2,9 @@ import React from 'react'
 import ScrollAnimation from './ScrollAnimation'
 import './About.css'
 
+/**
+ * About section - Personal introduction and background information
+ */
 const About = () => {
   return (
     <section id="about" className="about">

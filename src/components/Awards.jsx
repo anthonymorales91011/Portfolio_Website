@@ -1,8 +1,11 @@
 import React from 'react'
-import { FaTrophy, FaAward, FaMedal, FaGraduationCap, FaExternalLinkAlt } from 'react-icons/fa'
+import { FaTrophy, FaGraduationCap, FaExternalLinkAlt } from 'react-icons/fa'
 import ScrollAnimation from './ScrollAnimation'
 import './Awards.css'
 
+/**
+ * Awards section - Displays academic achievements and competition awards
+ */
 const Awards = () => {
   const awards = [
     {

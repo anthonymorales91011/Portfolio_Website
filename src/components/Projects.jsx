@@ -4,7 +4,12 @@ import ScrollAnimation from './ScrollAnimation'
 import PosterModal from './PosterModal'
 import './Projects.css'
 
+/**
+ * Projects section - Displays current and past projects with interactive poster viewing
+ * Projects are organized into "Current" and "Past" sections for better clarity
+ */
 const Projects = () => {
+  // State management for poster modal
   const [selectedPoster, setSelectedPoster] = useState(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -24,10 +29,10 @@ const Projects = () => {
       title: 'Cancer Bioengineering Research',
       description: 'Undergraduate researcher in the Michael R. King Laboratory at Rice University, focusing on cancer bioengineering and tumor microenvironment studies. My research involves engineering reproducible 3-D prostate cancer spheroids using SHArD culture techniques and developing MATLAB pipelines for 3-D nuclear segmentation and quantitative feature extraction from confocal microscopy images. This computational approach enables high-throughput analysis of spheroid morphology and supports the lab\'s mission to understand tumor biology and develop more effective therapeutic strategies.',
       technologies: ['MATLAB', 'Confocal Microscopy', '3-D Cell Culture', 'Image Processing', 'Nuclear Segmentation', 'Quantitative Analysis'],
-      image: `${import.meta.env.BASE_URL}images/Rice_logo.webp`, // Rice Bioengineering Department logo
-      github: '#',
+      image: `${import.meta.env.BASE_URL}images/Rice_logo.webp`,
+      github: null,
       demo: 'https://bioe.rice.edu/faculty/michael-king',
-      poster: `${import.meta.env.BASE_URL}posters/Morales, Anthony BIOE 400:401 - Poster.pdf`, // King lab poster
+      poster: `${import.meta.env.BASE_URL}posters/Morales, Anthony BIOE 400:401 - Poster.pdf`,
       period: 'Jan 2024 - Present',
       location: 'Rice University'
     },
@@ -37,8 +42,8 @@ const Projects = () => {
       description: 'Serving as Socials Head and Sophomore Class Representative for Will Rice College, one of Rice University\'s eleven residential colleges. Responsible for planning and executing large-scale community events, coordinating with vendors, managing logistics and safety protocols, and overseeing budget allocation. These roles require balancing student interests with institutional requirements while fostering residential college culture.',
       technologies: ['Event Planning', 'Budget Management', 'Student Governance', 'Leadership'],
       image: `${import.meta.env.BASE_URL}images/willrice_logo.png`,
-      github: '#',
-      demo: '#',
+      github: null,
+      demo: null,
       period: 'Aug 2024 - Present',
       location: 'Rice University'
     },
@@ -50,10 +55,10 @@ const Projects = () => {
       title: 'Chemical Biology Research',
       description: 'Laboratory intern in the Franz Research Group under Dr. Katherine J. Franz, James B. Duke Distinguished Professor of Chemistry. The lab focuses on understanding how biological systems manage essential yet potentially toxic metal ions like copper and iron. My research investigated Cu(II)–lipoic acid binding interactions using UV-Visible spectroscopy, analyzing absorbance shifts to characterize complex formation and binding dynamics, contributing to the lab\'s mission of developing chemical tools for therapeutic applications.',
       technologies: ['UV-Vis Spectroscopy', 'Chemical Analysis', 'Buffer Preparation', 'Titrations', 'Coordination Chemistry'],
-      image: `${import.meta.env.BASE_URL}images/duke%20logo.jpg`, // Duke Department of Chemistry logo
-      github: '#',
+      image: `${import.meta.env.BASE_URL}images/duke%20logo.jpg`,
+      github: null,
       demo: 'https://sites.duke.edu/franzlab/',
-      poster: `${import.meta.env.BASE_URL}posters/EXP_Poster.pdf`, // Franz lab poster
+      poster: `${import.meta.env.BASE_URL}posters/EXP_Poster.pdf`,
       period: 'Jun 2023 - Aug 2023',
       location: 'Duke University'
     },
@@ -63,8 +68,8 @@ const Projects = () => {
       description: 'Held multiple leadership roles for Peddie Robotics (FRC Team 5895) including Senior Programmer, Head Scout & Strategy Lead, and Finance & Marketing Lead. Developed data-driven match strategies analyzing opponent capabilities and optimizing alliance selection. Created predictive models for match outcomes and coordinated team positioning during competitions. Led sponsorship acquisition efforts, securing over $35,000 in annual funding to support team operations.',
       technologies: ['Robotics Programming', 'Data Analysis', 'Strategy', 'Sponsorship Development'],
       image: `${import.meta.env.BASE_URL}images/robotics-team.jpeg`,
-      github: 'https://github.com/PeddieRobotics', // Update with actual Peddie Robotics GitHub URL if different
-      demo: '#',
+      github: 'https://github.com/PeddieRobotics',
+      demo: null,
       period: 'Sep 2021 - May 2024',
       location: 'Peddie School'
     },
@@ -75,8 +80,8 @@ const Projects = () => {
               <div className="project-card">
               <div className="project-image">
                 <img src={project.image} alt={project.title} />
-          {(project.demo !== '#' || project.github !== '#' || project.poster) && (
-                  <div className="project-overlay">
+          {(project.demo || project.github || project.poster) && (
+            <div className="project-overlay">
               {project.poster && (
                 <button 
                   onClick={() => openPoster(project.poster)} 
@@ -87,20 +92,20 @@ const Projects = () => {
                   <span>Poster</span>
                 </button>
               )}
-                    {project.demo !== '#' && (
+              {project.demo && (
                 <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-link" aria-label="Visit Website">
-                        <FaExternalLinkAlt />
+                  <FaExternalLinkAlt />
                   <span>Website</span>
-                      </a>
-                    )}
-                    {project.github !== '#' && (
+                </a>
+              )}
+              {project.github && (
                 <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link" aria-label="View Code">
-                        <FaGithub />
+                  <FaGithub />
                   <span>Code</span>
-                      </a>
-                    )}
-                  </div>
-                )}
+                </a>
+              )}
+            </div>
+          )}
               </div>
               <div className="project-content">
                 <h3 className="project-title">{project.title}</h3>
