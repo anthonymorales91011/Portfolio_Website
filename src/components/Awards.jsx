@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaTrophy, FaAward, FaMedal, FaGraduationCap } from 'react-icons/fa'
+import { FaTrophy, FaAward, FaMedal, FaGraduationCap, FaExternalLinkAlt } from 'react-icons/fa'
 import ScrollAnimation from './ScrollAnimation'
 import './Awards.css'
 
@@ -15,11 +15,13 @@ const Awards = () => {
     },
     {
       id: 2,
-      title: 'FRC Team 5895: World Championship Success & District Dominance',
+      title: 'FRC Competition Awards',
       year: '2021-2024',
       description: 'Led team to 3 straight years of sweeping Mid-Atlantic District events and District Championships. Milstein Division Winners at Worlds 2023, Milstein Division Finalists 2024, and Roebling Quarterfinalists 2023. Served as Senior Programmer, Head Scout & Strategy Lead, securing $35,000+ in annual sponsorships.',
       icon: <FaTrophy />,
-      category: 'Competition & Leadership'
+      category: 'Competition & Leadership',
+      link: 'https://www.thebluealliance.com/team/5895',
+      linkText: 'View on The Blue Alliance'
     }
   ]
 
@@ -40,6 +42,11 @@ const Awards = () => {
                   <span className="award-year">{award.year}</span>
                 </div>
                 <p className="award-description">{award.description}</p>
+                {award.link && (
+                  <a href={award.link} target="_blank" rel="noopener noreferrer" className="award-link">
+                    <FaExternalLinkAlt /> {award.linkText}
+                  </a>
+                )}
                 <span className="award-category">{award.category}</span>
               </div>
               </div>

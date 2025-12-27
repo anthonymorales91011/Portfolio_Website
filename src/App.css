@@ -2,7 +2,8 @@
 
 .App {
   min-height: 100vh;
-  background: var(--bg-primary);
+  background: transparent;
+  position: relative;
 }
 
 main {

@@ -39,3 +39,4 @@ const ScrollAnimation = ({ children, className = '', delay = 0 }) => {
 
 export default ScrollAnimation
 
+
