@@ -26,3 +26,4 @@ To complete the setup, please add the following logos to this folder:
 - Recommended: PNG with transparent background for best appearance
 - The images will be automatically styled to fit properly in the project cards
 
+

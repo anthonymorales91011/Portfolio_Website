@@ -56,3 +56,4 @@ const PosterModal = ({ poster, isOpen, onClose }) => {
 
 export default PosterModal
 
+

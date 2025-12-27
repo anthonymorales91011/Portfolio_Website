@@ -14,3 +14,4 @@ Place your poster presentation files here.
 ## Usage
 After adding your poster files, update the `poster` field in the Projects component for the corresponding research project.
 
+
