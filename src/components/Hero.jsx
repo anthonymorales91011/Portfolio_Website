@@ -18,7 +18,7 @@ const Hero = () => {
           </p>
           <div className="hero-buttons">
             <a href="#contact" className="btn btn-primary">Get In Touch</a>
-            <a href="/Resume/Anthony_Morales_Resume.pdf" className="btn btn-secondary" download="Anthony_Morales_Resume.pdf">
+            <a href={`${import.meta.env.BASE_URL}Resume/Anthony_Morales_Resume.pdf`} className="btn btn-secondary" download="Anthony_Morales_Resume.pdf">
               <FaDownload /> Download Resume
             </a>
           </div>
@@ -33,7 +33,7 @@ const Hero = () => {
         </div>
         <div className="hero-image">
           <div className="hero-avatar">
-            <img src="/images/headshot.JPG" alt="Anthony Morales" />
+            <img src={`${import.meta.env.BASE_URL}images/headshot.JPG`} alt="Anthony Morales" />
           </div>
         </div>
       </div>
