@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-social">
-            <a href="https://linkedin.com/in/anthony-morales" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/anthony-morales-6b967127b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FaLinkedin />
             </a>
             <a href="mailto:tm110@rice.edu" aria-label="Email">

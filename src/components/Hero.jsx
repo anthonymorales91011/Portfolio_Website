@@ -18,12 +18,12 @@ const Hero = () => {
           </p>
           <div className="hero-buttons">
             <a href="#contact" className="btn btn-primary">Get In Touch</a>
-            <a href="/Anthony_Morales_Resume.pdf" className="btn btn-secondary" download>
+            <a href="/Resume/Anthony_Morales_Resume.pdf" className="btn btn-secondary" download="Anthony_Morales_Resume.pdf">
               <FaDownload /> Download Resume
             </a>
           </div>
           <div className="hero-social">
-            <a href="https://linkedin.com/in/anthony-morales" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/anthony-morales-6b967127b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FaLinkedin />
             </a>
             <a href="mailto:tm110@rice.edu" aria-label="Email">
